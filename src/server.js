@@ -23,7 +23,7 @@ mongoose.connect("mongodb+srv://omnistack:omnistack@cluster0-7qcgd.mongodb.net/o
 app.use((req, res, next) => {
   req.io = io;
 
-  return next;
+  return next();
 })
 
 app.use(express.json()); // middlewe
